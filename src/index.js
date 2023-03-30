@@ -7,3 +7,5 @@ div.textContent = 'Hello World'
 div.classList.add('styles')
 
 body.appendChild(div)
+
+console.lof('hello world')
