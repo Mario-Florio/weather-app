@@ -1,11 +1,12 @@
-import './styles.css'
+import { events } from './pub-sub';
+import { createHTML, createPage, render } from './global-functions';
+import { tag } from './fetch-weather-data';
+import './styles.css';
+import { getWeatherFormModule, currentWeatherModule, hourlyForecastModule, dailyForecastModule } from './dashboard/dashboard';
 
 const body = document.querySelector('body')
-const div = document.createElement('div')
 
-div.textContent = 'Hello World'
-div.classList.add('styles')
-
-body.appendChild(div)
-
-console.lof('hello world')
+getWeatherFormModule(body)
+currentWeatherModule(body)
+hourlyForecastModule(body)
+dailyForecastModule(body)
